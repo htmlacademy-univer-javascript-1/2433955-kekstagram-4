@@ -9,7 +9,7 @@ const isPalindrom = (str) => {
   str = str.replaceAll(' ', '').toLowerCase();
   const leng = str.length - 1;
   let reversedString = '';
-  for (let i = leng; i > 0; i--) {
+  for (let i = leng; i >= 0; i--) {
     reversedString += str[i];
   }
   if (str === reversedString) {
@@ -18,17 +18,22 @@ const isPalindrom = (str) => {
   return false;
 };
 
-console.log(isPalindrom('топот'));
+isPalindrom('топот');
 
 // 3 функция
-/*const toNumber = (str) => {
+const toNumber = (str) => {
   if (typeof str === Number) {
     return str;
   }
+  let result = '';
   for (let i = 0; i < str.length; i++) {
-
+    const currentCharacter = parseInt(str[i], 10);
+    if (!isNaN(currentCharacter)) {
+      result += currentCharacter;
+    }
   }
-}
+  return result;
+};
 
-toNumber('2023 год');*/
+toNumber('2023 год');
 
