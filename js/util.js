@@ -1,3 +1,5 @@
+const randomInteger = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
 // 1 функция
 const len = (str, maxLen) => str.length <= maxLen;
 
@@ -18,8 +20,6 @@ const isPalindrom = (str) => {
   return false;
 };
 
-isPalindrom('топот');
-
 // 3 функция
 const toNumber = (str) => {
   if (typeof str === Number) {
@@ -35,5 +35,4 @@ const toNumber = (str) => {
   return result;
 };
 
-toNumber('2023 год');
-
+export {randomInteger, toNumber, isPalindrom};
