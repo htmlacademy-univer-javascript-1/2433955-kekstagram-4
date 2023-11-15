@@ -35,4 +35,6 @@ const toNumber = (str) => {
   return result;
 };
 
-export {randomInteger, toNumber, isPalindrom};
+const createImgUrl = (id, directory, format) => directory + id + format;
+
+export {createImgUrl, randomInteger, toNumber, isPalindrom};
