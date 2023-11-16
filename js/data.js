@@ -1,4 +1,4 @@
-import { randomInteger } from './util.js';
+import { createImgUrl, randomInteger } from './util.js';
 
 const COUNT_PHOTO = 25;
 
@@ -45,9 +45,9 @@ const addComments = () => {
   return comments;
 };
 
-const addPhoto = (index) => ({
-  id: index,
-  url: `photos/${index + 1}.jpg`,
+const addPhoto = () => ({
+  id: randomInteger(1, COUNT_PHOTO),
+  url: createImgUrl(randomInteger(1, COUNT_PHOTO), 'photos/', '.jpg'),
   description: 'жоская картинка',
   likes: randomInteger(LIKES.MIN, LIKES.MAX),
   comments: addComments()
@@ -61,4 +61,4 @@ const addPhotos = () => {
 
 addPhotos();
 
-export {addPhotos};
+export {COUNT_PHOTO, addPhoto};
