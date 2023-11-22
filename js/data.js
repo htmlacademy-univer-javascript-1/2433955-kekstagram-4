@@ -28,8 +28,6 @@ const names = [
   'Григорий'
 ];
 
-const photos = [];
-
 const addComment = (index) => ({
   id: index,
   avatar: `img/avatar-${randomInteger(1, 6)}.svg`,
@@ -45,20 +43,12 @@ const addComments = () => {
   return comments;
 };
 
-const addPhoto = () => ({
-  id: randomInteger(1, COUNT_PHOTO),
-  url: createImgUrl(randomInteger(1, COUNT_PHOTO), 'photos/', '.jpg'),
+const addPhoto = (i) => ({
+  id: i,
+  url: createImgUrl(i, 'photos/', '.jpg'),
   description: 'жоская картинка',
   likes: randomInteger(LIKES.MIN, LIKES.MAX),
   comments: addComments()
 });
-
-const addPhotos = () => {
-  for (let i = 1; i <= COUNT_PHOTO; i++) {
-    photos.push(addPhoto(i));
-  }
-};
-
-addPhotos();
 
 export {COUNT_PHOTO, addPhoto};

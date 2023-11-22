@@ -37,4 +37,6 @@ const toNumber = (str) => {
 
 const createImgUrl = (id, directory, format) => directory + id + format;
 
-export {createImgUrl, randomInteger, toNumber, isPalindrom};
+const isEscKey = (evt) => evt.key === 'Escape';
+
+export {createImgUrl, randomInteger, toNumber, isPalindrom, isEscKey};
