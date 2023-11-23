@@ -9,7 +9,6 @@ const likesCount = bigPicture.querySelector('.likes-count');
 const pictureDescription = bigPicture.querySelector('.social__caption');
 const socialComments = bigPicture.querySelector('.social__comments');
 const commentsCountainer = bigPicture.querySelector('.social__comment-count');
-//const socialCommentsCount = bigPicture.querySelector('.comments-count');
 const loadComments = bigPicture.querySelector('.comments-loader');
 const socialFooterText = bigPicture.querySelector('.social__footer-text');
 
