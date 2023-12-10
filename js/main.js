@@ -14,3 +14,4 @@ renderPhotos(photos);
 
 import './form.js';
 import './hashtags-pristine.js';
+import './effects.js';
