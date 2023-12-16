@@ -3,7 +3,7 @@ import { isEscKey } from './util.js';
 import { uploadData } from './fetch.js';
 
 const errorMessage = document.querySelector('#error').content.querySelector('.error');
-const successMessage = document.querySelector('#success').content.querySelector('.messages');
+const successMessage = document.querySelector('#success').content.querySelector('.success');
 const formUpload = document.querySelector('.img-upload__form');
 
 const closePopup = () => {
