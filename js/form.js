@@ -1,4 +1,5 @@
 import { isEscKey } from './util.js';
+import {initRadios, resetFilters } from './effects.js';
 
 const Zoom = {
   MIN: 25,
@@ -25,6 +26,7 @@ const closeForm = () => {
   document.removeEventListener('keydown', onCloseFormEscKeyDown);
 
   formUpload.reset();
+  resetFilters();
 };
 
 function onCloseFormClick (evt) {
@@ -58,6 +60,8 @@ const onFileUploadChange = () => {
   formUploadClose.addEventListener('click', onCloseFormClick);
 
   document.addEventListener('keydown', onCloseFormEscKeyDown);
+
+  initRadios();
 };
 
 fileUpload.addEventListener('change', onFileUploadChange);
