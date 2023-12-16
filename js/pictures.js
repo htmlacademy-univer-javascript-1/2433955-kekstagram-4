@@ -30,4 +30,8 @@ const renderPhotos = (photos) => {
   pictures.append(fragment);
 };
 
-export{renderPhotos};
+const removePictures = () => {
+  document.querySelectorAll('.picture').forEach((photo) => photo.remove());
+};
+
+export{renderPhotos, removePictures};

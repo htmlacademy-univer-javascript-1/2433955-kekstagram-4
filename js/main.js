@@ -5,12 +5,14 @@ import './hashtags-pristine.js';
 import './effects.js';
 import { loadData } from './fetch.js';
 import './messages.js';
+import './filters.js';
 
 let photos = [];
 
 const onSuccess = (data) => {
   photos = data.slice();
   renderPhotos(photos);
+  document.querySelector('.img-filters').classList.remove('img-filters--inactive');
 };
 
 const onError = () => {

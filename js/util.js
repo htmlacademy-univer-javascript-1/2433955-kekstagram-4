@@ -35,6 +35,38 @@ const toNumber = (str) => {
   return result;
 };
 
-const isEscKey = (evt) => evt.key === 'Escape';
+const DELAY = 500;
 
-export {randomInteger, toNumber, isPalindrom, isEscKey};
+const Keys = {
+  ESCAPE: 'Escape',
+  ESC: 'Esc',
+};
+
+const checkStringLength = (string, length) => string.length <= length;
+
+const debounce = (cb) => {
+  let lastTimeout = null;
+
+  return (...args) => {
+    if (lastTimeout) {
+      window.clearTimeout(lastTimeout);
+    }
+    lastTimeout = window.setTimeout(() => {
+      cb(...args);
+    }, DELAY);
+  };
+};
+
+const shuffleArray = (array) => {
+  for (let indexOne = array.length - 1; indexOne > 0; indexOne--) {
+    const indexTwo = Math.floor(Math.random() * (indexOne + 1));
+    [array[indexOne], array[indexTwo]] = [array[indexTwo], array[indexOne]];
+  }
+  return array;
+};
+
+const isEscKey = (evt) => evt.key === Keys.ESCAPE || evt.key === Keys.ESC;
+
+const isButton = (evt) => evt.target.tagName === 'BUTTON';
+
+export {randomInteger, toNumber, isPalindrom, isEscKey, checkStringLength, debounce, shuffleArray, isButton};
