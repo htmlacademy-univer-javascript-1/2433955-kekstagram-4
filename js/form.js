@@ -1,5 +1,6 @@
 import { isEscKey } from './util.js';
 import {initRadios, resetFilters } from './effects.js';
+import { pristine } from './hashtags-pristine.js';
 
 const Zoom = {
   MIN: 25,
@@ -17,6 +18,7 @@ const plusButton = body.querySelector('.scale__control--bigger');
 const scaleControlValue = body.querySelector('.scale__control--value');
 const imagePreview = body.querySelector('.img-upload__preview');
 const mainPicture = document.querySelector('.img-upload__preview img');
+const imgUploadSubmitButton = document.querySelector('.img-upload__submit');
 
 const closeForm = () => {
   overlay.classList.add('hidden');
@@ -27,6 +29,10 @@ const closeForm = () => {
 
   formUpload.reset();
   resetFilters();
+
+  imgUploadSubmitButton.disabled = false;
+
+  pristine.reset();
 };
 
 function onCloseFormClick (evt) {
@@ -37,7 +43,8 @@ function onCloseFormClick (evt) {
 function onCloseFormEscKeyDown (evt) {
   if (isEscKey(evt) &&
     !evt.target.classList.contains('text__hashtags') &&
-    !evt.target.classList.contains('text__description'))
+    !evt.target.classList.contains('text__description') &&
+    !body.querySelector('.error'))
   {
     evt.preventDefault();
     closeForm();
