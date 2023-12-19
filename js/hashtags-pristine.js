@@ -3,8 +3,8 @@ const MAX_HASHTAGS = 5;
 const MAX_COMMENTS_LENGTH = 140;
 
 const formUpload = document.querySelector('.img-upload__form');
-const textDescriptionInput = document.querySelector('.text__description');
-const submitBtn = document.querySelector('#upload-submit');
+const textDescriptionInput = formUpload.querySelector('.text__description');
+const submitBtn = formUpload.querySelector('#upload-submit');
 
 const pristine = new Pristine(formUpload, {
   classTo: 'img-upload__field-wrapper',

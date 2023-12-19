@@ -6,11 +6,12 @@ const Slider = {
   STEP: 10,
 };
 
-const sliderElement = document.querySelector('.effect-level__slider');
-const sliderUpload = document.querySelector('.img-upload__effect-level');
-const currentSlider = document.querySelector('.effect-level__value');
-const filterRadios = document.querySelectorAll('.effects__item');
-const picture = document.querySelector('.img-upload__preview img');
+const formUpload = document.querySelector('.img-upload__form');
+const sliderElement = formUpload.querySelector('.effect-level__slider');
+const sliderUpload = formUpload.querySelector('.img-upload__effect-level');
+const currentSlider = formUpload.querySelector('.effect-level__value');
+const filterRadios = formUpload.querySelectorAll('.effects__item');
+const picture = formUpload.querySelector('.img-upload__preview img');
 
 let currentRadio = document.querySelector('.effects__radio').value;
 
