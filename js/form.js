@@ -10,15 +10,15 @@ const Zoom = {
 
 const body = document.querySelector('body');
 const formUpload = body.querySelector('.img-upload__form');
-const overlay = body.querySelector('.img-upload__overlay');
-const fileUpload = body.querySelector('#upload-file');
-const formUploadClose = body.querySelector('#upload-cancel');
-const minusButton = body.querySelector('.scale__control--smaller');
-const plusButton = body.querySelector('.scale__control--bigger');
-const scaleControlValue = body.querySelector('.scale__control--value');
-const imagePreview = body.querySelector('.img-upload__preview');
-const mainPicture = document.querySelector('.img-upload__preview img');
-const imgUploadSubmitButton = document.querySelector('.img-upload__submit');
+const overlay = formUpload.querySelector('.img-upload__overlay');
+const fileUpload = formUpload.querySelector('#upload-file');
+const formUploadClose = formUpload.querySelector('#upload-cancel');
+const minusButton = formUpload.querySelector('.scale__control--smaller');
+const plusButton = formUpload.querySelector('.scale__control--bigger');
+const scaleControlValue = formUpload.querySelector('.scale__control--value');
+const imagePreview = formUpload.querySelector('.img-upload__preview');
+const mainPicture = formUpload.querySelector('.img-upload__preview img');
+const imgUploadSubmitButton = formUpload.querySelector('.img-upload__submit');
 
 const closeForm = () => {
   overlay.classList.add('hidden');
