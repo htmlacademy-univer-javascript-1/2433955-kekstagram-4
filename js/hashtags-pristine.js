@@ -95,5 +95,5 @@ formUpload.addEventListener('submit', (evt) => {
   evt.preventDefault();
   pristine.validate();
 });
-//я устал
+
 export {pristine};
