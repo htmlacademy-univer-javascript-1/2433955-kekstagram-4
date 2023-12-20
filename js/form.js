@@ -33,6 +33,9 @@ const closeForm = () => {
   imgUploadSubmitButton.disabled = false;
 
   pristine.reset();
+
+  scaleControlValue.value = '100%';
+  imagePreview.style.transform = 'scale(1)';
 };
 
 function onCloseFormClick (evt) {
