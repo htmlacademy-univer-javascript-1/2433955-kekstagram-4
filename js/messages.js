@@ -48,7 +48,6 @@ const onSuccess = () => {
 
 const onError = () => {
   showErrorMessage();
-  // closeForm();
 };
 
 const onFormUploadSubmit = (evt) => {

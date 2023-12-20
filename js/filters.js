@@ -5,7 +5,6 @@ import {photos} from './main.js';
 const COUNT_OF_FILTER = 10;
 const ACTIVE_CLASS = 'img-filters__button--active';
 
-// const imgFilters = document.querySelector('.img-filters');
 const imgFiltersForm = document.querySelector('.img-filters__form');
 
 const availableFilters = {
